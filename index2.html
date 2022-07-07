@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<style>
+		.picture-envelope {
+			width: 100%;
+		}
+
+		.message-block-content iframe {
+			height: 600px;
+		}
+
+		.video-envelope {
+			width: 100%;
+		}
+
+		.main {
+			width: 100%;
+			/* border: 2px dashed red; */
+			height: 100vh;
+		}
+
+
+		.pen-size {
+			background-color: black;
+			border-radius: 50%;
+			display: inline-block;
+			vertical-align: middle;
+			cursor: pointer;
+			margin-left: 0.15rem;
+			margin-right: 0.15rem;
+		}
+
+		.pen-size-active {
+			border: 2px solid pink;
+		}
+
+		.pen-size-1 {
+			width: 1.0rem;
+			height: 1.0rem;
+		}
+
+		.pen-size-2 {
+			width: 1.25rem;
+			height: 1.25rem;
+		}
+
+		.pen-size-3 {
+			width: 1.5rem;
+			height: 1.5rem;
+		}
+
+		.pen-size-4 {
+			width: 1.75rem;
+			height: 1.75rem;
+		}
+
+		.pen-size-5 {
+			width: 2.0rem;
+			height: 2.0rem;
+		}
+
+		.pen-size-6 {
+			width: 2.25rem;
+			height: 2.25rem;
+		}
+
+		.pen-color {
+			width: 1.5rem;
+			height: 1.5rem;
+			border-radius: 50%;
+			display: inline-block;
+			vertical-align: middle;
+			cursor: pointer;
+			margin-left: 0.15rem;
+			margin-right: 0.15rem;
+		}
+
+		.pen-toolbar {
+			border: 2px dashed green;
+			user-select: none;
+			-moz-user-select: none;
+			-webkit-user-drag: none;
+			-webkit-user-select: none;
+			-ms-user-select: none;
+			padding-top: 1rem;
+			padding-bottom: 1rem;
+			margin-bottom: 1rem;
+			;
+		}
+
+		body {
+			overscroll-behavior: none;
+		}
+
+		.img-source-envelope {
+			position: relative;
+			padding: 0;
+			/* overscroll-behavior: none; */
+		}
+
+		.img-source-envelope img, .img-source-envelope video {
+			width: 100%;
+			user-drag: none;
+			user-select: none;
+			-moz-user-select: none;
+			-webkit-user-drag: none;
+			-webkit-user-select: none;
+			-ms-user-select: none;
+		}
+
+		.img-source-envelope svg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			cursor: crosshair;
+			touch-action: none;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="container">
+
+		<div class="main">
+
+			<h4>Image and video annotations</h4>
+
+			<h4>Image annotation</h4>
+
+			<div class="row">
+				<div class="img-source-envelope picture-envelope mb-4" id="imgSourceEnvelope">
+					<img id="imgSource" src="./zaba.png" crossorigin="anonymous">
+				</div>
+			</div>
+
+			<small>Click the Annotate button to capture a frame from the video and annotate it.</small>
+			<button type="button" class="btn btn-primary" id="btnAnnotateImage">Annotate</button>
+
+			<hr class="mt-4 mb-4" />
+
+			<h4>Video annotation</h4>
+
+			<div class="row">
+				<div class="img-source-envelope picture-envelope mb-4" id="videoSourceEnvelope">
+
+				<!-- 540p -->
+				<!-- <video controls crossorigin="anonymous" id="frame-559-404" src="https://player.vimeo.com/progressive_redirect/playback/719971625/rendition/540p/file.mp4?loc=external&signature=a7a7a61803f8d65d17698f7eaf0cc7060dba6bf47301b4f59a7f99a32433656d"></video> -->
+
+
+					<!-- 1080p -->
+					<video controls controlslist="nodownload nofullscreen" disablepictureinpicture disableremoteplayback
+						crossorigin="anonymous" id="frame-559-404"
+						src="https://player.vimeo.com/progressive_redirect/playback/719971625/rendition/1080p/file.mp4?loc=external&signature=4f9a6fb6fb83519f020dec820f304a6ee4f3650d9470ddccd60fb2bc35bc400b"></video>
+
+				</div>
+			</div>
+
+			<small>Stop the video at a desired time. Then click the Annotate button to capture a frame from the video and annotate it.</small>
+			<button type="button" class="btn btn-primary" id="btnAnnotateVideo">Annotate</button>
+
+		</div>
+	</div>
+
+	<script defer src="./annotations2.js"></script>
+</body>
+
+</html>
