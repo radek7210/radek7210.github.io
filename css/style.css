@@ -1,0 +1,148 @@
+#uploader form .error {
+    color: #f00;
+    font-size: 92%;
+    letter-spacing: -0.02em;
+    display: none;
+    margin-top: 0;
+    margin-bottom: 1px;
+}
+
+body, html {
+    width: 100%;
+}
+
+body.superadmin {
+    padding: 20px;
+}
+
+body.superadmin label {
+    color: #000;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.title {
+    color: #000;
+    margin: 0 0 20px 0;
+}
+
+.domain {
+    font-size: 110%;
+    float: left;
+    width: 200px;
+    margin: 0 20px 2px 0;
+}
+
+.systemPage {
+    padding-top: 50px;
+}
+
+@media (max-width: 500px) {
+    .popupContent {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .popupContent form fieldset, .popupContent .fieldset {
+        padding: 0 20px 15px;
+    }
+
+    .popupContent input[type="text"], .popupContent input[type="password"], .popupContent input.text {
+        width: 90%;
+    }
+
+    .popupContent form .submit a {
+        margin-left: 0;
+    }
+}
+
+#wrap, #page {
+    min-width: 100%;
+}
+
+#pageInner {
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+#profile, #socialPlugins {
+    margin-left: 13px;
+    margin-right: 13px;
+}
+
+@media (max-width: 767px) {
+    #shareBar {
+        display: none;
+    }
+
+    #demoBar {
+        float: left;
+        margin-left: 13px;
+    }
+
+    #demoBar .inner {
+        width: 180px;
+    }
+
+    #demoBar .title, #demoBar .expiration {
+        display: block;
+        float: none;
+        margin: -4px 0 0 20px;
+    }
+
+    #profile, #socialPlugins {
+        float: none;
+        width: 95%;
+        margin-bottom: 13px;
+    }
+}
+
+#adminBarCont_services .serviceInstagram .groupTitle span:before {
+    content: '';
+    clip: unset;
+    background: url('/images/icon-instagram.png') 50% 50% no-repeat;
+    background-size: contain;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.socialLinks .item#social_control_instagram img {
+    width: 32px;
+    height: 32px;
+}
+
+#adminBar .fontSelector ul {
+    position: relative;
+}
+
+#adminBar .fontSelector ul.opened {
+    position: relative;
+    max-height: 250px;
+    overflow-y: scroll;
+}
+
+#cookiesPermissionBtn {
+    display: inline-block;
+}
+.cookiesPermissionBtn {
+    border: none;
+    border-radius: 15px;
+    display: inline-block;
+    line-height: 30px;
+    font-size: 12px;
+    color: #000 !important;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 14px;
+    margin-left: 15px;
+    text-decoration: none !important;
+    background: rgb(255,255,255);
+}
+.cookiesPermissionBtn:hover {
+    background: #E30E20;
+}
